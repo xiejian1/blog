@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from django.conf.urls.static import static
 
-from blog.views import archives,IndexView,CategoryView,DetailPostView,TagView
+from blog.views import archives,IndexView,CategoryView,DetailPostView,TagView,search
 from blogproject import settings
 app_name = 'blog'
 urlpatterns = [
@@ -13,5 +13,6 @@ urlpatterns = [
     # url(r'category/(?P<pk>\d+)/$',category,name='category'),
     url(r'category/(?P<pk>\d+)/$',CategoryView.as_view(),name='category'),
     url(r'^tag/(?P<pk>\d+)/$', TagView.as_view(), name='tag'),
+    url(r'^blogsearch/$',search,name='search'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
