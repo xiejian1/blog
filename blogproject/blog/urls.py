@@ -13,6 +13,6 @@ urlpatterns = [
     # url(r'category/(?P<pk>\d+)/$',category,name='category'),
     url(r'category/(?P<pk>\d+)/$',CategoryView.as_view(),name='category'),
     url(r'^tag/(?P<pk>\d+)/$', TagView.as_view(), name='tag'),
-    url(r'^blogsearch/$',search,name='search'),
+    # url(r'^blogsearch/$',search,name='search'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'comment',
+    'haystack',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +86,17 @@ DATABASES = {
     }
 }
 
+#Haystack设置
+HAYSTACK_CONNECTIONS = {
+    'default':{
+        'ENGINE':'blog.whoosh_cn_backend.WhooshEngine', #指定使用的搜索引擎
+        'PATH':os.path.join(BASE_DIR,'whoosh_index'), #指定索引文件需要存放的位置
+    },
+}
+#指定对所搜结果进行分页
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
+#指定更新索引
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
