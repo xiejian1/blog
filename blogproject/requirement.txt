@@ -121,7 +121,7 @@ urlparse3==1.1
 vine==1.1.4
 virtualenv==16.1.0
 w3lib==1.18.0
-Werkzeug==0.11.15
+Werkzeug==0.15.3
 WsgiDAV==2.4.1
 yarg==0.1.9
 zope.interface==4.4.3
