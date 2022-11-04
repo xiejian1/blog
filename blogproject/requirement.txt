@@ -112,7 +112,7 @@ splinter==0.8.0
 SQLAlchemy==1.1.14
 tblib==1.3.2
 tornado==4.5.2
-Twisted==18.4.0
+Twisted==22.10.0
 tzlocal==1.5.1
 u-msgpack-python==2.5.0
 UNKNOWN==0.0.0
